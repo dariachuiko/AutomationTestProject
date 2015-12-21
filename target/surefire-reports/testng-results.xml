@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="OnlinerAutomationTest" duration-ms="71495" started-at="2015-12-21T15:28:58Z" finished-at="2015-12-21T15:30:09Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="71495" started-at="2015-12-21T15:28:58Z" finished-at="2015-12-21T15:30:09Z">
+      <class name="OnlinerAutomationTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="setUp" is-config="true" duration-ms="8404" started-at="2015-12-21T18:28:58Z" description="Init browser" finished-at="2015-12-21T18:29:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="oneCanAddAd()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="oneCanAddAd" duration-ms="15074" started-at="2015-12-21T18:29:06Z" description="Add new ad" finished-at="2015-12-21T18:29:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneCanAddAd -->
+        <test-method status="PASS" signature="stopBrowser()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="stopBrowser" is-config="true" duration-ms="440" started-at="2015-12-21T18:29:21Z" description="Stop Browser" finished-at="2015-12-21T18:29:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="setUp" is-config="true" duration-ms="6494" started-at="2015-12-21T18:29:22Z" description="Init browser" finished-at="2015-12-21T18:29:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="oneCanExchangeOperation()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="oneCanExchangeOperation" duration-ms="8869" started-at="2015-12-21T18:29:28Z" description="Exchange" finished-at="2015-12-21T18:29:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneCanExchangeOperation -->
+        <test-method status="PASS" signature="stopBrowser()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="stopBrowser" is-config="true" duration-ms="185" started-at="2015-12-21T18:29:37Z" description="Stop Browser" finished-at="2015-12-21T18:29:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="setUp" is-config="true" duration-ms="6203" started-at="2015-12-21T18:29:37Z" description="Init browser" finished-at="2015-12-21T18:29:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="oneCanSearch()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="oneCanSearch" duration-ms="7271" started-at="2015-12-21T18:29:43Z" description="Search" finished-at="2015-12-21T18:29:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneCanSearch -->
+        <test-method status="PASS" signature="stopBrowser()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="stopBrowser" is-config="true" duration-ms="264" started-at="2015-12-21T18:29:51Z" description="Stop Browser" finished-at="2015-12-21T18:29:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="setUp" is-config="true" duration-ms="6556" started-at="2015-12-21T18:29:51Z" description="Init browser" finished-at="2015-12-21T18:29:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="oneCanSendMessage()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="oneCanSendMessage" duration-ms="11468" started-at="2015-12-21T18:29:57Z" description="SendMessage" finished-at="2015-12-21T18:30:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneCanSendMessage -->
+        <test-method status="PASS" signature="stopBrowser()[pri:0, instance:OnlinerAutomationTest@77b52d12]" name="stopBrowser" is-config="true" duration-ms="250" started-at="2015-12-21T18:30:09Z" description="Stop Browser" finished-at="2015-12-21T18:30:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+      </class> <!-- OnlinerAutomationTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- OnlinerAutomationTest -->
+</testng-results>
