@@ -18,7 +18,7 @@ public class AddAdPage extends AbstractPage {
     @FindBy(xpath = "//div[@class = 'i-view']//select[@name = 'f']")
     private WebElement buttonChoiceCategory;
 
-    @FindBy(xpath = "//div[@class = 'i-view']//select[@name = 'f']//optgroup[@label = 'Недвижимость']//option[@value='1061']")
+    @FindBy(xpath = "//option[@value ='257']")
     private WebElement buttonChoiceCategoryC;
 
     @FindBy(xpath = "//div[@class ='ips']//div[@class = 'i-view']//input[@type ='text']")
