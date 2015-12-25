@@ -4,12 +4,13 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.pattern.MessagePatternConverter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import pages.CurrencyExchangePage;
 import pages.MainPage;
 import pages.MessagePage;
 import pages.AddAdPage;
 import java.util.concurrent.TimeUnit;
-import java.awt.*;
 import java.util.*;
 /**
  * Created by daryachuiko on 19.12.15.
@@ -23,8 +24,13 @@ public class Steps {
     public void initBrowser()
     {
         driver = new FirefoxDriver();
+
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      //  driver.manage().window().setPosition(new Point(100, 100));
+
+       // driver.manage().window().setSize(new Dimension(600, 550));
+
         logger.info("Browser started");
     }
 
@@ -39,8 +45,8 @@ public class Steps {
 
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
         loginPage.openPage();
+        driver.manage().window().maximize();
         loginPage.login(username, password);
     }
 
@@ -48,6 +54,7 @@ public class Steps {
     {
 
         MainPage loginPage = new MainPage(driver);
+        //loginPage.w
         logger.info(loginPage.getLoggedInUserName());
         return (loginPage.getLoggedInUserName().trim().toLowerCase().equals(userid));
     }
@@ -56,6 +63,8 @@ public class Steps {
     {
         logger.info("TEST 2");
         MainPage mainPage = new MainPage(driver);
+        driver.manage().window().setPosition(new Point(0, 0));
+        driver.manage().window().setSize(new Dimension(1920, 1080));
 //        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         mainPage.openPage();

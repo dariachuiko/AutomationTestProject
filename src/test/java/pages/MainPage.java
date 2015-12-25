@@ -66,6 +66,7 @@ public class MainPage extends AbstractPage {
     public void openPage()
     {
         driver.navigate().to(BASE_URL);
+        driver.manage().window().maximize();
         logger.info("Main page opened");
     }
 

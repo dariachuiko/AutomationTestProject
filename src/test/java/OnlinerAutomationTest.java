@@ -47,6 +47,7 @@ public class OnlinerAutomationTest {
     @Test(description = "Add new ad")
     public void oneCanAddAd()
     {
+
         steps.loginOnliner(USERNAME, PASSWORD);
         steps.addAd(TITLE,TEXTAD,SHORTTEXT,PRICE);
 
