@@ -66,8 +66,8 @@ public class MainPage extends AbstractPage {
     public void openPage()
     {
         driver.navigate().to(BASE_URL);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         logger.info("Main page opened");
     }
