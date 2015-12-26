@@ -24,8 +24,8 @@ public class Steps {
     public void initBrowser()
     {
         driver = new FirefoxDriver();
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         logger.info("Browser started");
     }
 
@@ -40,8 +40,8 @@ public class Steps {
 
         loginPage.openPage();
 
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         loginPage.login(username, password);
     }
 
@@ -59,8 +59,8 @@ public class Steps {
  //       driver.manage().window().maximize();
 
         mainPage.openPage();
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         mainPage.addAdClick();
         AddAdPage addAdPage = new AddAdPage(driver);
         addAdPage.addAd(titleAd, textAdd, shortText, price);
@@ -81,8 +81,8 @@ public class Steps {
         logger.info("TEST 3");
         MainPage mainPage = new MainPage(driver);
         mainPage.openPage();
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         mainPage.searchOnCatalog(text);
     }
 
@@ -102,11 +102,11 @@ public class Steps {
 
 
         mainPage.openPage();
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         mainPage.exchangeManyClick();
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         CurrencyExchangePage currencyExchangePage = new CurrencyExchangePage(driver);
         currencyExchangePage.exchangeMany(countMany);
 
@@ -121,8 +121,8 @@ public class Steps {
 
         String afterM = Integer.toString(changeValue * value);
 
-        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         String finalV = currencyExchangePage.getCurrencyOutValue().replaceAll(" ", "");
 
@@ -142,8 +142,8 @@ public class Steps {
         MainPage mainPage = new MainPage(driver);
 
         mainPage.clickOnMessage();
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         MessagePage messagePage = new MessagePage(driver);
         beforeCountSentMessage = messagePage.countMessegeSent();
         messagePage.sendMessage(name,title,text);
