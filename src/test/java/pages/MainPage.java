@@ -18,7 +18,7 @@ public class MainPage extends AbstractPage {
 
     private final Logger logger = Logger.getLogger(MainPage.class);
 
-    private final String BASE_URL = "http://www.onliner.by/#login";
+    private final String BASE_URL = "http://www.onliner.by";
 
     @FindBy(xpath = "//div[@class ='auth-bar__item auth-bar__item--text']")
     private WebElement buttonLogin;

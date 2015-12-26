@@ -5,7 +5,7 @@
     <classes>
       <class name="OnlinerAutomationTest">
         <methods>
-          <include name="oneCanExchangeOperation"/>
+          <include name="oneCanSendMessage"/>
           <include name="setUp"/>
           <include name="stopBrowser"/>
         </methods>

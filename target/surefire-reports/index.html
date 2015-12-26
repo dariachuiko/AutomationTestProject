@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,6 +107,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-OnlinerAutomationTest" title="OnlinerAutomationTest" hash-for-method="oneCanExchangeOperation">oneCanExchangeOperation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-OnlinerAutomationTest" title="OnlinerAutomationTest" hash-for-method="oneCanLoginOnliner">oneCanLoginOnliner</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -153,6 +158,15 @@
                   <span class="method-name">oneCanExchangeOperation</span>
                   <em>
 (Exchange)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="oneCanLoginOnliner">
+                  </a> <!-- oneCanLoginOnliner -->
+                  <span class="method-name">oneCanLoginOnliner</span>
+                  <em>
+(Login to Onliner)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -226,23 +240,27 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'oneCanAddAd')
 data.setCell(0, 2, 'OnlinerAutomationTest')
-data.setCell(0, 3, 28158);
+data.setCell(0, 3, 34465);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'oneCanSendMessage')
 data.setCell(1, 2, 'OnlinerAutomationTest')
-data.setCell(1, 3, 19001);
+data.setCell(1, 3, 20340);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'oneCanExchangeOperation')
+data.setCell(2, 1, 'oneCanLoginOnliner')
 data.setCell(2, 2, 'OnlinerAutomationTest')
-data.setCell(2, 3, 14497);
+data.setCell(2, 3, 14745);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'oneCanSearch')
+data.setCell(3, 1, 'oneCanExchangeOperation')
 data.setCell(3, 2, 'OnlinerAutomationTest')
-data.setCell(3, 3, 12920);
+data.setCell(3, 3, 13088);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'oneCanSearch')
+data.setCell(4, 2, 'OnlinerAutomationTest')
+data.setCell(4, 3, 12901);
 window.suiteTableData['OnlinerAutomationTest']= { tableData: data, tableDiv: 'times-div-OnlinerAutomationTest'}
 return data;
 }
@@ -280,47 +298,59 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">oneCanAddAd</span>
-                <span class="method-start">5857 ms</span>
+                <span class="method-start">6707 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopBrowser</span>
-                <span class="method-start">34016 ms</span>
+                <span class="method-start">41172 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">34273 ms</span>
+                <span class="method-start">41421 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">oneCanExchangeOperation</span>
-                <span class="method-start">37859 ms</span>
+                <span class="method-start">46031 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopBrowser</span>
-                <span class="method-start">52356 ms</span>
+                <span class="method-start">59119 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">52527 ms</span>
+                <span class="method-start">59283 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">oneCanLoginOnliner</span>
+                <span class="method-start">64354 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">stopBrowser</span>
+                <span class="method-start">79100 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">79266 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">oneCanSearch</span>
-                <span class="method-start">57531 ms</span>
+                <span class="method-start">84019 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopBrowser</span>
-                <span class="method-start">70451 ms</span>
+                <span class="method-start">96920 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">70643 ms</span>
+                <span class="method-start">97122 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">oneCanSendMessage</span>
-                <span class="method-start">75736 ms</span>
+                <span class="method-start">101848 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopBrowser</span>
-                <span class="method-start">94737 ms</span>
+                <span class="method-start">122188 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

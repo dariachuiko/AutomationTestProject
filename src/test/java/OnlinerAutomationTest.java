@@ -36,13 +36,12 @@ public class OnlinerAutomationTest {
     }
 
 
-//    @Test(description = "Login to Onliner")
-//    public void oneCanLoginOnliner()
-//    {
-//        steps.loginOnliner(USERNAME, PASSWORD);
-//
-//        Assert.assertTrue(steps.isLoggedIn(USERID));
-//    }
+    @Test(description = "Login to Onliner")
+    public void oneCanLoginOnliner()
+    {
+        steps.loginOnliner(USERNAME, PASSWORD);
+        Assert.assertTrue(steps.isLoggedIn(USERID));
+    }
 
     @Test(description = "Add new ad")
     public void oneCanAddAd()

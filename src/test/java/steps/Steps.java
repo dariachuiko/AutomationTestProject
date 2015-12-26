@@ -24,13 +24,8 @@ public class Steps {
     public void initBrowser()
     {
         driver = new FirefoxDriver();
-
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-      //  driver.manage().window().setPosition(new Point(100, 100));
-
-       // driver.manage().window().setSize(new Dimension(600, 550));
-
         logger.info("Browser started");
     }
 
@@ -43,18 +38,16 @@ public class Steps {
     {
         MainPage loginPage = new MainPage(driver);
 
+        loginPage.openPage();
+
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        loginPage.openPage();
-        driver.manage().window().maximize();
         loginPage.login(username, password);
     }
 
     public boolean isLoggedIn(String userid)
     {
-
         MainPage loginPage = new MainPage(driver);
-        //loginPage.w
         logger.info(loginPage.getLoggedInUserName());
         return (loginPage.getLoggedInUserName().trim().toLowerCase().equals(userid));
     }
@@ -63,11 +56,11 @@ public class Steps {
     {
         logger.info("TEST 2");
         MainPage mainPage = new MainPage(driver);
-        driver.manage().window().setPosition(new Point(0, 0));
-        driver.manage().window().setSize(new Dimension(1920, 1080));
-//        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+ //       driver.manage().window().maximize();
+
         mainPage.openPage();
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         mainPage.addAdClick();
         AddAdPage addAdPage = new AddAdPage(driver);
         addAdPage.addAd(titleAd, textAdd, shortText, price);
@@ -88,6 +81,8 @@ public class Steps {
         logger.info("TEST 3");
         MainPage mainPage = new MainPage(driver);
         mainPage.openPage();
+        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         mainPage.searchOnCatalog(text);
     }
 
@@ -103,16 +98,16 @@ public class Steps {
     {
         logger.info("TEST 4");
         MainPage mainPage = new MainPage(driver);
+        driver.manage().window().maximize();
 
-//        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         mainPage.openPage();
-
+        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         mainPage.exchangeManyClick();
+        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         CurrencyExchangePage currencyExchangePage = new CurrencyExchangePage(driver);
-//        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         currencyExchangePage.exchangeMany(countMany);
 
     }
@@ -126,8 +121,8 @@ public class Steps {
 
         String afterM = Integer.toString(changeValue * value);
 
-//        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-//        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         String finalV = currencyExchangePage.getCurrencyOutValue().replaceAll(" ", "");
 
@@ -145,7 +140,10 @@ public class Steps {
         logger.info("TEST 5");
         logger.info("Click on message");
         MainPage mainPage = new MainPage(driver);
+
         mainPage.clickOnMessage();
+        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         MessagePage messagePage = new MessagePage(driver);
         beforeCountSentMessage = messagePage.countMessegeSent();
         messagePage.sendMessage(name,title,text);
