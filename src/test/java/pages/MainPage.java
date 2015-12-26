@@ -66,6 +66,8 @@ public class MainPage extends AbstractPage {
     public void openPage()
     {
         driver.navigate().to(BASE_URL);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         logger.info("Main page opened");
     }
@@ -77,8 +79,8 @@ public class MainPage extends AbstractPage {
         inputLogin.sendKeys(username);
         inputPassword.sendKeys(password);
         buttonSubmit.click();
-//        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         logger.info("Login performed");
     }
 
@@ -92,8 +94,8 @@ public class MainPage extends AbstractPage {
     public void addAdClick()
     {
         buttonBoroholka.click();
-//        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         buttonAddAd.click();
     }
 
@@ -114,8 +116,8 @@ public class MainPage extends AbstractPage {
 
     public void exchangeManyClick() {
         exchange.click();
-//        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
     }
 
